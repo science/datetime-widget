@@ -62,19 +62,18 @@ class DateTimeWidgetProvider : AppWidgetProvider() {
         val maxChars = 6
 
         // Calculate max font size that fits width
-        // Approximate: font size * 0.6 * charCount ≈ text width
-        val sizeByWidth = (availableWidth / (maxChars * 0.6)).toFloat()
+        // Character width is roughly 0.5x font size for bold sans-serif
+        val sizeByWidth = (availableWidth / (maxChars * 0.5)).toFloat()
 
         // Calculate max font size that fits height
-        // Two equal lines: each gets 50% of height
-        // Account for line height (~1.2x font size)
-        val sizeByHeight = (availableHeight * 0.5 / 1.2).toFloat()
+        // Two lines, each takes ~50% of height (no extra line spacing needed)
+        val sizeByHeight = (availableHeight * 0.45).toFloat()
 
         // Use the smaller constraint
         var fontSizeSp = minOf(sizeByWidth, sizeByHeight)
 
         // Clamp to reasonable range
-        fontSizeSp = fontSizeSp.coerceIn(8f, 96f)
+        fontSizeSp = fontSizeSp.coerceIn(12f, 120f)
 
         return fontSizeSp
     }
