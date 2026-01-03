@@ -12,6 +12,7 @@ local.properties
 
 # Generated
 *.apk
+!downloads/*.apk
 *.ap_
 *.dex
 *.class
