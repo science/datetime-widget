@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:format12Hour="h:mm"
-        android:format24Hour="HH:mm"
-        android:textSize="16sp"
+        android:format24Hour="H:mm"
+        android:textSize="24sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
@@ -21,9 +21,9 @@
         android:id="@+id/date_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:format12Hour="EEE MMM d"
-        android:format24Hour="EEE MMM d"
-        android:textSize="10sp"
-        android:textColor="#CCCCCC" />
+        android:format12Hour="MMM d"
+        android:format24Hour="MMM d"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
